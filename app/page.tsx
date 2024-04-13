@@ -12,6 +12,15 @@ export default function Home() {
     return result
   }, [])
 
+  const [count, setCount] = useState(0)
+
+  return (
+    <div className="">
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  )
+
   useEffect(() => {
     console.log('Component has mounted')
   }, [])
